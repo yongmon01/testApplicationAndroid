@@ -24,4 +24,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
+    public void openNaver(View view){
+        Intent intent = new Intent(this, OpenNaverActivity.class);
+        //EditText editText = (EditText) findViewById(R.id.editTextTextPersonName4);
+        String naverURL = "https://www.naver.com";
+        intent.putExtra(EXTRA_MESSAGE, naverURL);
+        startActivity(intent);
+    }
 }
