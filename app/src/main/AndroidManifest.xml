@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testapplication">
-    // 웹뷰 쓰기위해
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TestApplication">
+        android:theme="@style/Theme.TestApplication"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".OpenDaumActivity"
+            android:exported="true" />
         <activity
             android:name=".OpenNaverActivity"
             android:parentActivityName=".MainActivity">

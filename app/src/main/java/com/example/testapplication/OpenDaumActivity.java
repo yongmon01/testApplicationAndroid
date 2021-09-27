@@ -7,22 +7,15 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-//import android.widget.TextView;
 
-public class OpenNaverActivity extends AppCompatActivity {
+public class OpenDaumActivity extends AppCompatActivity {
     private WebView mWebView;
     private WebSettings mWebSettings;
 
     @Override
-    protected void onSaveInstanceState(Bundle outState){
-        mWebView.saveState(outState);
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_naver);
+        setContentView(R.layout.activity_open_daum);
 
         Intent intent = getIntent();
         String url = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -44,10 +37,6 @@ public class OpenNaverActivity extends AppCompatActivity {
         mWebSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // 브라우저 캐시 허용 여부
         mWebSettings.setDomStorageEnabled(true); // 로컬저장소 허용 여부
 
-        //System.out.println(savedInstanceState);
-        if (savedInstanceState != null)
-            mWebView.restoreState(savedInstanceState);
-        else
-            mWebView.loadUrl(url);
+        mWebView.loadUrl(url);
     }
 }

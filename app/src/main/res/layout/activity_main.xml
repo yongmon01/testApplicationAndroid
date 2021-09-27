@@ -12,6 +12,7 @@
         android:layout_height="85dp"
         android:layout_marginStart="184dp"
         android:layout_marginTop="64dp"
+        android:onClick="openDaum"
         android:text="Daum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
