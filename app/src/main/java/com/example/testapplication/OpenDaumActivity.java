@@ -13,6 +13,12 @@ public class OpenDaumActivity extends AppCompatActivity {
     private WebSettings mWebSettings;
 
     @Override
+    protected void onSaveInstanceState(Bundle outState){
+        mWebView.saveState(outState);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_daum);
@@ -37,6 +43,9 @@ public class OpenDaumActivity extends AppCompatActivity {
         mWebSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // 브라우저 캐시 허용 여부
         mWebSettings.setDomStorageEnabled(true); // 로컬저장소 허용 여부
 
-        mWebView.loadUrl(url);
+        if (savedInstanceState != null)
+            mWebView.restoreState(savedInstanceState);
+        else
+            mWebView.loadUrl(url);
     }
 }

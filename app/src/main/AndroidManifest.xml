@@ -13,8 +13,19 @@
         android:theme="@style/Theme.TestApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".OpenFragment"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".OpenDaumActivity"
-            android:exported="true" />
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".OpenNaverActivity"
             android:parentActivityName=".MainActivity">

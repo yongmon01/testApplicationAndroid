@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/activity_display_message.xml" value="0.25" />
         <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/activity_open_fragment.xml" value="0.25" />
         <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/activity_open_naver.xml" value="0.16" />
+        <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/fragment_a.xml" value="0.25" />
+        <entry key="..\:/Users/hoyong/AndroidStudioProjects/testApplication/app/src/main/res/layout/fragment_b.xml" value="0.27471668620554907" />
       </map>
     </option>
   </component>

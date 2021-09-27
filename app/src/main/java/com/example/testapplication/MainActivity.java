@@ -34,10 +34,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openDaum(View view){
-        Intent intent = new Intent(this, OpenNaverActivity.class);
+        Intent intent = new Intent(this, OpenDaumActivity.class);
         //EditText editText = (EditText) findViewById(R.id.editTextTextPersonName4);
         String daumURL = "https://www.daum.net";
         intent.putExtra(EXTRA_MESSAGE, daumURL);
+        startActivity(intent);
+    }
+
+    public void openFragment(View view){
+        Intent intent = new Intent(this, OpenFragment.class);
+        //String naverURL = "https://www.naver.com";
+        //intent.putExtra(EXTRA_MESSAGE, naverURL);
         startActivity(intent);
     }
 }
