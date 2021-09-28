@@ -30,7 +30,7 @@ public class OpenNaverActivity extends AppCompatActivity {
         //TextView textView = findViewById(R.id.textView2);
         //textView.setText(message);
 
-        mWebView = (WebView) findViewById(R.id.webView);
+        mWebView = (WebView) findViewById(R.id.webViewNaver);
         mWebView.setWebViewClient(new WebViewClient()); // 클릭시 새창 안뜨게
         mWebSettings = mWebView.getSettings(); //세부 세팅 등록
         mWebSettings.setJavaScriptEnabled(true); // 웹페이지 자바스클비트 허용 여부
