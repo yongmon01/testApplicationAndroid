@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,19 @@ public class FragmentA extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false);
+        // return inflater.inflate(R.layout.fragment_a, container, false);
+        View view = inflater.inflate(R.layout.fragment_a, container, false);
+        WebView mWebView = (WebView)view.findViewById(R.id.webViewA);
+        mWebView.setWebViewClient(new WebViewClient());
+        WebSettings mWebSettings = mWebView.getSettings();
+        mWebSettings.setJavaScriptEnabled(true);
+        mWebView.loadUrl("https://www.naver.com");
+        return view;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+        setRetainInstance(true);
     }
 }
